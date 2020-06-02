@@ -73,7 +73,7 @@ static NSString *lang	= @"en_US";
 
 /*%hook CCUIHeaderPocketView
 - (void)setFrame:(CGRect)frame {
-    %orig(CGRectSetY(frame, 900));
+    %orig(CGRectSetY(frame, 900))
 }
 
 
