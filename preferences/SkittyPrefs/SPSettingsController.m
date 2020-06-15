@@ -28,15 +28,15 @@
 	self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(-50, -5, titleView.bounds.size.width+100, titleView.bounds.size.height)];
 //				self.contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 75, self.bounds.size.width, 118)];
 	self.titleLabel.font = [UIFont boldSystemFontOfSize:17];
-	self.titleLabel.text = @"iPadBar13";
+	self.titleLabel.text = @"";
 	self.titleLabel.alpha = 1.0;
 	self.titleLabel.textAlignment = NSTextAlignmentCenter;
 	[titleView addSubview:self.titleLabel];
 
-	self.versionLabel = [[UILabel alloc] initWithFrame:CGRectMake(-50, 10, titleView.bounds.size.width+100, titleView.bounds.size.height)];
+	self.versionLabel = [[UILabel alloc] initWithFrame:CGRectMake(-50, 5, titleView.bounds.size.width+100, titleView.bounds.size.height)];
 //				self.contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 75, self.bounds.size.width, 118)];
-	self.versionLabel.font = [UIFont boldSystemFontOfSize:12];
-	self.versionLabel.text = @"v1.2.3";
+	self.versionLabel.font = [UIFont boldSystemFontOfSize:17];
+	self.versionLabel.text = @"2.0.0";
 	self.versionLabel.textColor = ColorTwo;
 	self.versionLabel.alpha = 1.0;
 	self.versionLabel.textAlignment = NSTextAlignmentCenter;

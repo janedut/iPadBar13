@@ -1,7 +1,6 @@
 Package: com.aohuiliu.ipadbar13
 Name: iPadBar13
 Depends: mobilesubstrate
-Version: 2.0.0
 Architecture: iphoneos-arm
 Description: Awesome Status Bar!
 Maintainer: AohuiLiu <x345242281@outlook.com>
@@ -9,3 +8,5 @@ Author: AohuiLiu, NoisyFlake <x345242281@outlook.com>
 Depiction: https://janedut.github.io/repo/depiction/web/com.aohuiliu.ipadbar13.html
 Icon: https://janedut.github.io/repo/assets/com.aohuiliu.ipadbar13/icon.png
 Section: Tweaks
+Version: 2.0.0
+Installed-Size: 392
