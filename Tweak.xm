@@ -41,6 +41,11 @@ static CGFloat FontSize1, FontSize2, FontSize3;
 
 static BOOL Fakepencent;
 static long long FakePercentage;
+static long long speedStyle;
+static NSString *speedUnitK;
+static NSString *speedUnitM;
+static NSString *speedUnitG;
+static long long speedUnitValue;
 
 static NSString *lang	= @"en_US";
 
@@ -118,15 +123,69 @@ NSString* bytesFormat(long bytes) {
 		if (EnableNetspeed == YES && bytes < limitbytes*1000) {
 			return @"";
 		}else {
-		if (EnableNetspeed == YES && bytes < megabytes) {
-			return [NSString stringWithFormat:@"%.1fK/s", (double)bytes / kilobytes];
-		}
-		if (EnableNetspeed == YES && bytes < gigabytes) {
-			return [NSString stringWithFormat:@"%.1fM/s", (double)bytes / megabytes];
-		}
-    if (EnableNetspeed == YES ) {
-			return [NSString stringWithFormat:@"%.1fG/s", (double)bytes / gigabytes];
-		}
+      switch (speedUnitValue) {
+        case 0:
+        speedUnitK = @"K/s";
+        speedUnitM = @"M/s";
+        speedUnitG = @"G/s";
+        break;
+
+        case 1:
+        speedUnitK = @"KB/s";
+        speedUnitM = @"MB/s";
+        speedUnitG = @"GB/s";
+        break;
+
+        case 2:
+        speedUnitK = @"K";
+        speedUnitM = @"M";
+        speedUnitG = @"G";
+        break;
+
+        case 3:
+        speedUnitK = @"KB";
+        speedUnitM = @"MB";
+        speedUnitG = @"GB";
+        break;
+      }
+      switch (speedStyle) {
+        case 0:
+        if (EnableNetspeed == YES && bytes < megabytes) {
+    			return [NSString stringWithFormat:@"%.0f%@", (double)bytes / kilobytes, speedUnitK];
+    		}
+    		if (EnableNetspeed == YES && bytes < gigabytes) {
+    			return [NSString stringWithFormat:@"%.0f%@", (double)bytes / megabytes, speedUnitM];
+    		}
+        if (EnableNetspeed == YES ) {
+    			return [NSString stringWithFormat:@"%.0f%@", (double)bytes / gigabytes, speedUnitG];
+    		}
+        break;
+
+        case 1:
+        if (EnableNetspeed == YES && bytes < megabytes) {
+    			return [NSString stringWithFormat:@"%.1f%@", (double)bytes / kilobytes, speedUnitK];
+    		}
+    		if (EnableNetspeed == YES && bytes < gigabytes) {
+    			return [NSString stringWithFormat:@"%.1f%@", (double)bytes / megabytes, speedUnitM];
+    		}
+        if (EnableNetspeed == YES ) {
+    			return [NSString stringWithFormat:@"%.1f%@", (double)bytes / gigabytes, speedUnitG];
+    		}
+        break;
+
+        case 2:
+        if (EnableNetspeed == YES && bytes < megabytes) {
+    			return [NSString stringWithFormat:@"%.2f%@", (double)bytes / kilobytes, speedUnitK];
+    		}
+    		if (EnableNetspeed == YES && bytes < gigabytes) {
+    			return [NSString stringWithFormat:@"%.2f%@", (double)bytes / megabytes, speedUnitM];
+    		}
+        if (EnableNetspeed == YES ) {
+    			return [NSString stringWithFormat:@"%.2f%@", (double)bytes / gigabytes, speedUnitG];
+    		}
+        break;
+
+      }
     return @"";
 
 	}
@@ -459,9 +518,7 @@ static void loadPrefs() {
     showBatteryPercentSign = ( [prefs objectForKey:@"showBatteryPercentSign"] ? [[prefs objectForKey:@"showBatteryPercentSign"] boolValue] : YES );
     showWifi = ( [prefs objectForKey:@"showWifi"] ? [[prefs objectForKey:@"showWifi"] boolValue] : YES );
     showData = ( [prefs objectForKey:@"showData"] ? [[prefs objectForKey:@"showData"] boolValue] : YES );
-//    NGLandscape = ( [prefs objectForKey:@"NGLandscape"] ? [[prefs objectForKey:@"NGLandscape"] boolValue] : NO );
-//    NGKeyboard = ( [prefs objectForKey:@"NGKeyboard"] ? [[prefs objectForKey:@"NGKeyboard"] boolValue] : NO );
-//    NoGesture = ( [prefs objectForKey:@"NoGesture"] ? [[prefs objectForKey:@"NoGesture"] boolValue] : YES );
+
 
 
     lang		= [prefs objectForKey:@"lang"] ?[prefs objectForKey : @"lang"]  : @"en_US";
@@ -483,6 +540,8 @@ static void loadPrefs() {
     PercentInBattery = ( [prefs objectForKey:@"PercentInBattery"] ? [[prefs objectForKey:@"PercentInBattery"] boolValue] : NO );
     Fakepencent = ( [prefs objectForKey:@"Fakepencent"] ? [[prefs objectForKey:@"Fakepencent"] boolValue] : NO );
     FakePercentage	= [prefs valueForKey:@"FakePercentage"] ?[[prefs valueForKey : @"FakePercentage"] longValue] : 100;
+    speedStyle	= [prefs valueForKey:@"speedStyle"] ?[[prefs valueForKey : @"speedStyle"] longValue] : 0;
+    speedUnitValue	= [prefs valueForKey:@"speedUnitValue"] ?[[prefs valueForKey : @"speedUnitValue"] longValue] : 0;
 
 
 

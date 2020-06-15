@@ -15,7 +15,7 @@
 		<key>label</key>
 		<string>iPadBar13</string>
 		<key>icon</key>
-		<string>icon.png</string>
+		<string>icon/icon.png</string>
 		<key>packageID</key>
 		<string>com.aohuiliu.ipadbar13</string>
 	</dict>

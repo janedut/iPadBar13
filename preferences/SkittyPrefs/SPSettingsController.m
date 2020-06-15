@@ -35,7 +35,7 @@
 
 	self.versionLabel = [[UILabel alloc] initWithFrame:CGRectMake(-50, 5, titleView.bounds.size.width+100, titleView.bounds.size.height)];
 //				self.contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 75, self.bounds.size.width, 118)];
-	self.versionLabel.font = [UIFont boldSystemFontOfSize:17];
+	//self.versionLabel.font = [UIFont boldSystemFontOfSize:17];
 	self.versionLabel.text = @"2.0.0";
 	self.versionLabel.textColor = ColorTwo;
 	self.versionLabel.alpha = 1.0;
@@ -44,7 +44,7 @@
 
 
 	self.iconView = [[UIImageView alloc] initWithFrame:titleView.bounds];
-	self.iconView.image = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/iPadBar13.bundle/icon.png"];
+	self.iconView.image = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/iPadBar13.bundle/icon/icon.png"];
 	self.iconView.alpha = 0;
 	[titleView addSubview:self.iconView];
 
@@ -151,39 +151,65 @@
 
 
 
-@implementation TwitterCell
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier specifier:(PSSpecifier *)specifier  {
 
+
+@implementation LabeledSliderCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier specifier:(PSSpecifier *)specifier
+{
 	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier specifier:specifier];
 
-	if (self)
+    if (self)
     {
-        UILabel *User = [[UILabel alloc] initWithFrame:CGRectMake(59,8,200,20.5)];
-        [User setText:specifier.properties[@"account"]];
-		[User setFont:[UIFont systemFontOfSize:17]];
-		User.textColor = ColorOne;
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15,8,300,20)];
+        label.text = specifier.properties[@"label"];
 
-
-		UILabel *Description = [[UILabel alloc]initWithFrame:CGRectMake(59,29,200,20)];
-		[Description setText:specifier.properties[@"description"]];
-		[Description setFont:[UIFont systemFontOfSize:12]];
-    Description.textColor = ColorTwo;
-
-
-		NSBundle *bundle = [[NSBundle alloc]initWithPath:@"/Library/PreferenceBundles/iPadBar13.bundle"];
-
-		UIImage *profilePicture;
-        profilePicture = [UIImage imageWithContentsOfFile:[bundle pathForResource:specifier.properties[@"avatar"] ofType:@"png"]];
-		UIImageView *profilePictureView = [[UIImageView alloc] initWithImage:profilePicture];
-		[profilePictureView setFrame:CGRectMake(15,14,29,29)];
-
-        [self addSubview:User];
-		[self addSubview:Description];
-		[self addSubview:profilePictureView];
-
+        [self.contentView addSubview:label];
+        [self.control setFrame:CGRectOffset(self.control.frame, 10, 10)];
+		//[self setBackgroundColor:[UIColor whiteColor]];
     }
 
     return self;
 }
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self.control setFrame:CGRectOffset(self.control.frame, 0, 9)];
+}
+
+@end
+
+
+
+
+@implementation SublabelLinkCell
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier specifier:(PSSpecifier *)specifier {
+  self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier specifier:specifier];
+  if (self) {
+    //NSString *subTitleValue = [specifier.properties objectForKey:@"subtitle"];
+    self.detailTextLabel.text = [specifier.properties objectForKey:@"sublabel"];
+  }
+  return self;
+}
+
+- (void)setSeparatorStyle:(UITableViewCellSeparatorStyle)style {
+  [super setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+}
+@end
+
+@implementation SublabelSwitchCell
+
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier specifier:(PSSpecifier *)specifier {
+  self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier specifier:specifier];
+  if (self) {
+    NSString *subTitleValue = [specifier.properties objectForKey:@"sublabel"];
+    self.detailTextLabel.text = subTitleValue;
+
+  }
+  return self;
+}
+
+
 
 @end

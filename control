@@ -6,6 +6,4 @@ Architecture: iphoneos-arm
 Description: Awesome Status Bar!
 Maintainer: AohuiLiu <x345242281@outlook.com>
 Author: AohuiLiu, NoisyFlake <x345242281@outlook.com>
-Depiction: https://janedut.github.io/repo/depiction/web/com.aohuiliu.ipadbar13.html
-Icon: https://janedut.github.io/repo/assets/com.aohuiliu.ipadbar13/icon.png
 Section: Tweaks

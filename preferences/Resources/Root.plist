@@ -14,49 +14,43 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSButtonCell</string>
+			<string>PSLinkCell</string>
 			<key>cellClass</key>
-			<string>TwitterCell</string>
-			<key>account</key>
+			<string>SublabelLinkCell</string>
+			<key>label</key>
 			<string>@AohuiLiu</string>
-			<key>description</key>
-			<string>iPadBar13 Developer</string>
-			<key>height</key>
-			<integer>57</integer>
-			<key>avatar</key>
-			<string>AohuiLiu</string>
+			<key>sublabel</key>
+			<string>Fighting Developer</string>
 			<key>action</key>
 			<string>twitter_aohuiliu</string>
+			<key>icon</key>
+			<string>icon/AohuiLiu</string>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSButtonCell</string>
+			<string>PSLinkCell</string>
 			<key>cellClass</key>
-			<string>TwitterCell</string>
-			<key>account</key>
+			<string>SublabelLinkCell</string>
+			<key>label</key>
 			<string>@NoisyFlake</string>
-			<key>description</key>
+			<key>sublabel</key>
 			<string>iPadStatusBar Developer</string>
-			<key>height</key>
-			<integer>57</integer>
-			<key>avatar</key>
-			<string>NoisyFlake</string>
+			<key>icon</key>
+			<string>icon/NoisyFlake</string>
 			<key>action</key>
 			<string>twitter_noisyflake</string>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSButtonCell</string>
+			<string>PSLinkCell</string>
 			<key>cellClass</key>
-			<string>TwitterCell</string>
-			<key>account</key>
+			<string>SublabelLinkCell</string>
+			<key>label</key>
 			<string>@Skitty</string>
-			<key>description</key>
+			<key>sublabel</key>
 			<string>Skitty Preference Developer</string>
-			<key>height</key>
-			<integer>57</integer>
-			<key>avatar</key>
-			<string>Skitty</string>
+			<key>icon</key>
+			<string>icon/Skitty</string>
 			<key>action</key>
 			<string>twitter_skitty</string>
 		</dict>
@@ -132,27 +126,35 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSSwitchCell</string>
+			<string>PSSegmentCell</string>
 			<key>default</key>
-			<false/>
+			<integer>0</integer>
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
+			<key>validTitles</key>
+			<array>
+				<string>Default Font</string>
+				<string>Bold Font</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
 			<key>key</key>
 			<string>BoldPer</string>
 			<key>label</key>
 			<string>Bold Font</string>
 		</dict>
 		<dict>
-			<key>cell</key>
-			<string>PSStaticTextCell</string>
-			<key>label</key>
-			<string>Percentage Font Size</string>
-		</dict>
-		<dict>
 			<key>showValue</key>
 			<true/>
 			<key>cell</key>
 			<string>PSSliderCell</string>
+			<key>cellClass</key>
+			<string>LabeledSliderCell</string>
+			<key>label</key>
+			<string>Percentage Font Size</string>
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
 			<key>default</key>
@@ -163,6 +165,8 @@
 			<integer>15</integer>
 			<key>key</key>
 			<string>PerSize</string>
+			<key>height</key>
+			<integer>66</integer>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -221,7 +225,7 @@ No need to respring after changing string.</string>
 			<key>cell</key>
 			<string>PSEditTextCell</string>
 			<key>label</key>
-			<string>String</string>
+			<string>Carrier Text: </string>
 			<key>key</key>
 			<string>CarText</string>
 			<key>default</key>
@@ -233,11 +237,21 @@ No need to respring after changing string.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSSwitchCell</string>
+			<string>PSSegmentCell</string>
 			<key>default</key>
-			<false/>
+			<integer>0</integer>
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
+			<key>validTitles</key>
+			<array>
+				<string>Default Font</string>
+				<string>Bold Font</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
 			<key>key</key>
 			<string>BoldCar</string>
 			<key>label</key>
@@ -245,13 +259,11 @@ No need to respring after changing string.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSStaticTextCell</string>
+			<string>PSSliderCell</string>
+			<key>cellClass</key>
+			<string>LabeledSliderCell</string>
 			<key>label</key>
 			<string>Carrier Font Size</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSliderCell</string>
 			<key>showValue</key>
 			<true/>
 			<key>PostNotification</key>
@@ -266,6 +278,8 @@ No need to respring after changing string.</string>
 			<integer>15</integer>
 			<key>key</key>
 			<string>CarSize</string>
+			<key>height</key>
+			<integer>66</integer>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -281,7 +295,7 @@ No need to respring after changing string.</string>
 			<key>label</key>
 			<string>Custom 4G &amp; LTE Text</string>
 			<key>key</key>
-			<string>EnableCustomData</string>
+			<string>EnableCustomLTE</string>
 			<key>default</key>
 			<false/>
 			<key>defaults</key>
@@ -291,7 +305,7 @@ No need to respring after changing string.</string>
 			<key>cell</key>
 			<string>PSEditTextCell</string>
 			<key>label</key>
-			<string>Data Text</string>
+			<string>Data Text: </string>
 			<key>key</key>
 			<string>DataText</string>
 			<key>default</key>
@@ -303,11 +317,21 @@ No need to respring after changing string.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSSwitchCell</string>
+			<string>PSSegmentCell</string>
 			<key>default</key>
-			<false/>
+			<integer>0</integer>
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
+			<key>validTitles</key>
+			<array>
+				<string>Default Font</string>
+				<string>Bold Font</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
 			<key>key</key>
 			<string>BoldData</string>
 			<key>label</key>
@@ -315,13 +339,11 @@ No need to respring after changing string.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSStaticTextCell</string>
+			<string>PSSliderCell</string>
+			<key>cellClass</key>
+			<string>LabeledSliderCell</string>
 			<key>label</key>
 			<string>Data Text Font Size</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSliderCell</string>
 			<key>showValue</key>
 			<true/>
 			<key>PostNotification</key>
@@ -336,6 +358,8 @@ No need to respring after changing string.</string>
 			<integer>15</integer>
 			<key>key</key>
 			<string>DataSize</string>
+			<key>height</key>
+			<integer>66</integer>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -345,7 +369,6 @@ No need to respring after changing string.</string>
 			<key>footerText</key>
 			<string>Default font size: 12
 Time format MUST contain colon. (:)
-Check your language from Format Example.
 Too long time format may cause NO DISPLAY in app.</string>
 		</dict>
 		<dict>
@@ -364,7 +387,7 @@ Too long time format may cause NO DISPLAY in app.</string>
 			<key>cell</key>
 			<string>PSEditTextCell</string>
 			<key>label</key>
-			<string>Language</string>
+			<string>Language: </string>
 			<key>key</key>
 			<string>lang</string>
 			<key>default</key>
@@ -376,7 +399,7 @@ Too long time format may cause NO DISPLAY in app.</string>
 			<key>cell</key>
 			<string>PSEditTextCell</string>
 			<key>label</key>
-			<string>First Format</string>
+			<string>First Format: </string>
 			<key>key</key>
 			<string>TimeFormat1</string>
 			<key>default</key>
@@ -389,6 +412,10 @@ Too long time format may cause NO DISPLAY in app.</string>
 		<dict>
 			<key>cell</key>
 			<string>PSSliderCell</string>
+			<key>cellClass</key>
+			<string>LabeledSliderCell</string>
+			<key>label</key>
+			<string>First Format Font Size</string>
 			<key>key</key>
 			<string>FontSize1</string>
 			<key>min</key>
@@ -401,26 +428,38 @@ Too long time format may cause NO DISPLAY in app.</string>
 			<true/>
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
+			<key>height</key>
+			<integer>66</integer>
 		</dict>
 		<dict>
 			<key>PostNotification</key>
 			<string>com.aohuiliu.ipadbar13/prefsupdated</string>
 			<key>cell</key>
-			<string>PSSwitchCell</string>
+			<string>PSSegmentCell</string>
+			<key>default</key>
+			<integer>0</integer>
+			<key>defaults</key>
+			<string>com.aohuiliu.ipadbar13</string>
+			<key>validTitles</key>
+			<array>
+				<string>Default Font</string>
+				<string>Bold Font</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
 			<key>label</key>
 			<string>Bold Font</string>
 			<key>key</key>
 			<string>BoldFont1</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.aohuiliu.ipadbar13</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSEditTextCell</string>
 			<key>label</key>
-			<string>Second Format </string>
+			<string>Second Format: </string>
 			<key>key</key>
 			<string>TimeFormat2</string>
 			<key>default</key>
@@ -431,6 +470,10 @@ Too long time format may cause NO DISPLAY in app.</string>
 		<dict>
 			<key>cell</key>
 			<string>PSSliderCell</string>
+			<key>cellClass</key>
+			<string>LabeledSliderCell</string>
+			<key>label</key>
+			<string>Second Format Font Size</string>
 			<key>key</key>
 			<string>FontSize2</string>
 			<key>min</key>
@@ -443,26 +486,42 @@ Too long time format may cause NO DISPLAY in app.</string>
 			<true/>
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
+			<key>height</key>
+			<integer>66</integer>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSSwitchCell</string>
+			<string>PSSegmentCell</string>
 			<key>label</key>
 			<string>Bold Font</string>
 			<key>key</key>
 			<string>BoldFont2</string>
 			<key>default</key>
-			<false/>
+			<integer>0</integer>
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
+			<key>validTitles</key>
+			<array>
+				<string>Default Font</string>
+				<string>Bold Font</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSButtonCell</string>
+			<key>cellClass</key>
+			<string>SublabelLinkCell</string>
 			<key>action</key>
 			<string>formatexample</string>
 			<key>label</key>
-			<string>Format Example</string>
+			<string>Format Help</string>
+			<key>sublabel</key>
+			<string>Don&apos;t know how to start? Check this!</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -470,14 +529,17 @@ Too long time format may cause NO DISPLAY in app.</string>
 			<key>label</key>
 			<string>NetWork Speed Settings</string>
 			<key>footerText</key>
-			<string>Need to TURN ON customing time format to display the network speed.
-Too long time format may cause NO DISPLAY in app.</string>
+			<string>Too long time format may cause NO DISPLAY in app.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
+			<key>cellClass</key>
+			<string>SublabelSwitchCell</string>
 			<key>label</key>
 			<string>Enable</string>
+			<key>sublabel</key>
+			<string>Enable custom time format first.</string>
 			<key>key</key>
 			<string>EnableNetspeed</string>
 			<key>default</key>
@@ -488,6 +550,10 @@ Too long time format may cause NO DISPLAY in app.</string>
 		<dict>
 			<key>cell</key>
 			<string>PSSliderCell</string>
+			<key>cellClass</key>
+			<string>LabeledSliderCell</string>
+			<key>label</key>
+			<string>Speed Font Size</string>
 			<key>key</key>
 			<string>FontSize3</string>
 			<key>min</key>
@@ -500,34 +566,112 @@ Too long time format may cause NO DISPLAY in app.</string>
 			<true/>
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
+			<key>height</key>
+			<integer>66</integer>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSSwitchCell</string>
+			<string>PSSegmentCell</string>
 			<key>label</key>
 			<string>Bold Font</string>
 			<key>key</key>
 			<string>BoldFont3</string>
 			<key>default</key>
-			<true/>
+			<integer>0</integer>
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
+			<key>validTitles</key>
+			<array>
+				<string>Default Font</string>
+				<string>Bold Font</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSEditTextCell</string>
+			<string>PSSliderCell</string>
+			<key>cellClass</key>
+			<string>LabeledSliderCell</string>
 			<key>label</key>
 			<string>Hide When Speed&lt;  K</string>
 			<key>key</key>
 			<string>limitbytes</string>
 			<key>default</key>
 			<string>0</string>
-			<key>isNumeric</key>
-			<string>true</string>
-			<key>keyboard</key>
-			<string>numbers</string>
+			<key>isSegmented</key>
+			<true/>
+			<key>showValue</key>
+			<true/>
+			<key>min</key>
+			<integer>0</integer>
+			<key>max</key>
+			<integer>100</integer>
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
+			<key>height</key>
+			<integer>66</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Speed Style</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSegmentCell</string>
+			<key>key</key>
+			<string>speedStyle</string>
+			<key>default</key>
+			<integer>0</integer>
+			<key>defaults</key>
+			<string>com.aohuiliu.ipadbar13</string>
+			<key>validTitles</key>
+			<array>
+				<string>No decimal</string>
+				<string>1 decimal</string>
+				<string>2 decimals</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Speed Unit Style</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSegmentCell</string>
+			<key>key</key>
+			<string>speedUnitValue</string>
+			<key>default</key>
+			<integer>0</integer>
+			<key>defaults</key>
+			<string>com.aohuiliu.ipadbar13</string>
+			<key>validTitles</key>
+			<array>
+				<string>K, M, G/s</string>
+				<string>KB, MB, GB/s</string>
+				<string>K, M, G</string>
+				<string>KB, MB, GB</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+			</array>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -535,33 +679,29 @@ Too long time format may cause NO DISPLAY in app.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSButtonCell</string>
+			<string>PSLinkCell</string>
 			<key>cellClass</key>
-			<string>TwitterCell</string>
-			<key>account</key>
+			<string>SublabelLinkCell</string>
+			<key>label</key>
 			<string>支付宝(AliPay)</string>
-			<key>description</key>
+			<key>sublabel</key>
 			<string>给我买包辣条(Buy me a coffee)</string>
-			<key>height</key>
-			<integer>57</integer>
-			<key>avatar</key>
-			<string>alipay</string>
+			<key>icon</key>
+			<string>icon/alipay</string>
 			<key>action</key>
 			<string>AliPay</string>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSButtonCell</string>
+			<string>PSLinkCell</string>
 			<key>cellClass</key>
-			<string>TwitterCell</string>
-			<key>account</key>
+			<string>SublabelLinkCell</string>
+			<key>label</key>
 			<string>我的源(My Repo)</string>
-			<key>description</key>
+			<key>sublabel</key>
 			<string>Add my repo to Cydia</string>
-			<key>height</key>
-			<integer>57</integer>
-			<key>avatar</key>
-			<string>repo</string>
+			<key>icon</key>
+			<string>icon/repo</string>
 			<key>action</key>
 			<string>Repo</string>
 		</dict>

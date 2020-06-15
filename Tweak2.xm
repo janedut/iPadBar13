@@ -1,6 +1,7 @@
 #import "Tweak.h"
 static BOOL BoldPer;
 static BOOL EnableCustomCarrier;
+static BOOL EnableCustomLTE;
 static CGFloat PerSize;
 
 static CGFloat DataSize;
@@ -43,7 +44,7 @@ static NSString *DataText;
         %orig(CarText);
       }
 
-    else if ([arg1 containsString:@"4G"] || [arg1 containsString:@"LTE"]) {
+    else if (([arg1 containsString:@"4G"] || [arg1 containsString:@"LTE"]) && EnableCustomLTE) {
       if (BoldData) [self setFont: [UIFont systemFontOfSize:DataSize weight:UIFontWeightSemibold]];
       else [self setFont: [UIFont systemFontOfSize:DataSize weight:UIFontWeightMedium]];
         %orig(DataText);
@@ -73,6 +74,7 @@ static void loadPrefs() {
   if (prefs) {
 
     EnableCustomCarrier = ( [prefs objectForKey:@"EnableCustomCarrier"] ? [[prefs objectForKey:@"EnableCustomCarrier"] boolValue] : NO );
+    EnableCustomLTE = ( [prefs objectForKey:@"EnableCustomLTE"] ? [[prefs objectForKey:@"EnableCustomLTE"] boolValue] : NO );
     CarText		= [prefs objectForKey:@"CarText"] ?[prefs objectForKey : @"CarText"]  : @"iPadbar13";
     DataText		= [prefs objectForKey:@"DataText"] ?[prefs objectForKey : @"DataText"]  : @"10G";
     BoldCar = ( [prefs objectForKey:@"BoldCar"] ? [[prefs objectForKey:@"BoldCar"] boolValue] : NO );

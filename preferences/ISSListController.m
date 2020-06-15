@@ -86,7 +86,7 @@ typedef enum {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://jq.qq.com/?_wv=1027&k=5Lix6sj"] options:@{} completionHandler:nil];
 }
 -(void)Repo {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://janedut.github.io/repo"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://janedut.github.io/"] options:@{} completionHandler:nil];
   }
 
 -(void)twitter_skitty {

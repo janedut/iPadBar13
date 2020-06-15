@@ -4,7 +4,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import "SPHeaderView.h"
 #import <Preferences/PSSliderTableCell.h>
-
+#import <Preferences/PSSwitchTableCell.h>
 
 /*@interface UIApplication (Private)
 @property (nonatomic, retain) UIStatusBar *statusBar;
@@ -25,7 +25,13 @@
 - (NSBundle *)resourceBundle;
 
 @end
-@interface TwitterCell : PSTableCell
-@end
+
+
 @interface LabeledSliderCell : PSSliderTableCell
+@end
+
+@interface SublabelSwitchCell : PSSwitchTableCell
+@end
+
+@interface SublabelLinkCell : PSTableCell
 @end
