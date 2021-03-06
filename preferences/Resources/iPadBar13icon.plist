@@ -76,6 +76,20 @@
 			<key>defaults</key>
 			<string>com.aohuiliu.ipadbar13</string>
 			<key>key</key>
+			<string>ShowBatBolt</string>
+			<key>label</key>
+			<string>Battery Bolt *</string>
+			<key>PostNotification</key>
+			<string>com.aohuiliu.ipadbar13/prefsupdated</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.aohuiliu.ipadbar13</string>
+			<key>key</key>
 			<string>showBatteryPercent</string>
 			<key>label</key>
 			<string>Battery Percentage</string>

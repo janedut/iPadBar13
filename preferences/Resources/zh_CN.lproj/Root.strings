@@ -1,0 +1,49 @@
+{
+
+  "iPadBar13 Developer" = "iPadBar13开发者";
+  "Credits" = "开发者";
+
+  "Status Bar settings" = "状态栏设置";
+  "iPad StatusBar" = "iPad状态栏";
+  "Extra Padding" = "状态栏两端留空";
+  "Hide Status Bar In CC (13.4)" = "隐藏控制中心状态栏";
+
+  "Show Items" = "显示图标";
+
+  "Percentage Settings" = "电池百分比设置";
+  "Percentage In Battery" = "电池内百分比";
+  "Default Font" = "默认字体";
+  "Bold Font" = "加粗字体";
+  "Percentage Font Size" = "百分比字体大小";
+  "Fake Percentage" = "虚拟电量";
+  
+  "Custom Carrier" = "运营商自定义";
+  "Enable" = "开启";
+  "Carrier Text: " = "运营商文本：";
+  "Carrier Font Size" = "字体大小";
+  
+  "Data Settings" = "蜂窝数据设置";
+  "Data Text: " = "文本：";
+  "Data Text Font Size" = "文本字体大小";
+  
+  "Custom Time Format" = "时间格式自定义";
+  "Language: " = "语言：";
+  "First Format: " = "格式一：";
+  "First Format Font Size" = "格式一字体大小";
+  "Second Format: " = "格式二：";
+  "Second Format Font Size" = "格式二字体大小";
+  "Format Help" = "时间格式示例";
+  
+  "NetWork Speed Settings" = "网速设置";
+  "Enable custom time format first." = "需先开启时间格式自定义";
+  "Too long time format may cause NO DISPLAY in app." = "显示网速需先开启时间格式自定义。时间格式太长，网速也不会显示。";
+  "Speed Style" = "网速保留小数";
+  "No decimal" = "不保留";
+  "1 decimal" = "保留一位";
+  "2 decimals" = "保留两位";
+  "Speed Unit Style" = "网速单位";
+  "Custom 4G & LTE Text" = "自定义4G";
+  "It is highly recommended to update to iOS 13.4, which fixes the issue that iPadStatusBar not work in LockScreen." = "建议更新至13.4及以上，修复状态栏的问题。";
+  "Keep Blank To Hide. No need to respring after changing string." = "留空表示隐藏，更改后无需注销，立即生效。";
+  "Default font size: 12. Time format MUST contain colon (:). Too long time format may cause NO DISPLAY in app." = "默认字体大小为12。时间格式之一必须包含冒号。太长的格式在APP中不会正常显示。";
+}

@@ -1,0 +1,20 @@
+{
+  "* Respring required" = "带*的注销生效";
+  "* Respring required" = "带* 的注销生效";
+  "Activity Indicator" = "状态栏菊花";
+  "Airplane Mode" = "飞行模式";
+  "Alarm" = "闹钟";
+  "Battery Icon *" = "电池图标 *";
+  "Battery Bolt *" = "充电图标 *";
+  "Battery Percentage" = "电池百分比";
+  "% *" = "%号 *";
+  "Breadcrumb" = "左上角快捷返回";
+  "Carrier" = "运营商";
+  "Data Network *" = "4G *";
+  "Do Not Disturb" = "勿扰模式";
+  "Location Services" = "定位";
+  "Lock Icon" = "锁屏的锁";
+  "Rotation Lock" = "旋转锁定";
+  "Signal Strength *" = "信号 *";
+  "Time *" = "时间 *";
+}

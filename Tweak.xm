@@ -47,6 +47,8 @@ static NSString *speedUnitM;
 static NSString *speedUnitG;
 static long long speedUnitValue;
 
+static BOOL ShowBatBolt;
+
 static NSString *lang	= @"en_US";
 
 %group fakepercentGroup
@@ -113,7 +115,7 @@ static NSString *lang	= @"en_US";
 
 /* NETWORK SPEED (by julioverne) */
 static BOOL EnableNetspeed;
-static int limitbytes;
+static CGFloat limitbytes;
 static const long kilobytes = 1 << 10;
 static const long megabytes = 1 << 20;
 static const long gigabytes = 1 << 30;
@@ -337,6 +339,14 @@ static NSMutableAttributedString* formattedAttributedString() {
 %end
 
 %hook _UIBatteryView
+
+-(UIColor *)boltColor {
+
+    //sss = self.chargePercent;
+    if (ShowBatBolt == NO) return [UIColor clearColor];
+    else return %orig;
+}
+
 +(CGSize)_batterySizeForIconSize:(long long)arg1{
   if (!showBattery) {
      return CGSizeMake(0, 0);
@@ -535,13 +545,14 @@ static void loadPrefs() {
     FontSize1	= [prefs valueForKey:@"FontSize1"] ?[[prefs valueForKey : @"FontSize1"] floatValue] : 14.0;
     FontSize2	= [prefs valueForKey:@"FontSize2"] ?[[prefs valueForKey : @"FontSize2"] floatValue] : 11.0;
     FontSize3	= [prefs valueForKey:@"FontSize3"] ?[[prefs valueForKey : @"FontSize3"] floatValue] : 10.0;
-    limitbytes	= [prefs valueForKey:@"limitbytes"] ?[[prefs valueForKey : @"limitbytes"] intValue] : 0;
+    limitbytes	= [prefs valueForKey:@"limitbytes"] ?[[prefs valueForKey : @"limitbytes"] floatValue] : 0;
 
     PercentInBattery = ( [prefs objectForKey:@"PercentInBattery"] ? [[prefs objectForKey:@"PercentInBattery"] boolValue] : NO );
     Fakepencent = ( [prefs objectForKey:@"Fakepencent"] ? [[prefs objectForKey:@"Fakepencent"] boolValue] : NO );
     FakePercentage	= [prefs valueForKey:@"FakePercentage"] ?[[prefs valueForKey : @"FakePercentage"] longValue] : 100;
     speedStyle	= [prefs valueForKey:@"speedStyle"] ?[[prefs valueForKey : @"speedStyle"] longValue] : 0;
     speedUnitValue	= [prefs valueForKey:@"speedUnitValue"] ?[[prefs valueForKey : @"speedUnitValue"] longValue] : 0;
+    ShowBatBolt = ( [prefs objectForKey:@"ShowBatBolt"] ? [[prefs objectForKey:@"ShowBatBolt"] boolValue] : NO );
 
 
 

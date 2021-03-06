@@ -20,7 +20,7 @@
 			<key>label</key>
 			<string>@AohuiLiu</string>
 			<key>sublabel</key>
-			<string>Fighting Developer</string>
+			<string>iPadBar13 Developer</string>
 			<key>action</key>
 			<string>twitter_aohuiliu</string>
 			<key>icon</key>
@@ -143,8 +143,6 @@
 			</array>
 			<key>key</key>
 			<string>BoldPer</string>
-			<key>label</key>
-			<string>Bold Font</string>
 		</dict>
 		<dict>
 			<key>showValue</key>
@@ -206,8 +204,7 @@
 			<key>label</key>
 			<string>Custom Carrier</string>
 			<key>footerText</key>
-			<string>Keep Blank To Hide
-No need to respring after changing string.</string>
+			<string>Keep Blank To Hide. No need to respring after changing string.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -367,9 +364,7 @@ No need to respring after changing string.</string>
 			<key>label</key>
 			<string>Custom Time Format</string>
 			<key>footerText</key>
-			<string>Default font size: 12
-Time format MUST contain colon. (:)
-Too long time format may cause NO DISPLAY in app.</string>
+			<string>Default font size: 12. Time format MUST contain colon (:). Too long time format may cause NO DISPLAY in app.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -603,7 +598,7 @@ Too long time format may cause NO DISPLAY in app.</string>
 			<key>default</key>
 			<string>0</string>
 			<key>isSegmented</key>
-			<true/>
+			<false/>
 			<key>showValue</key>
 			<true/>
 			<key>min</key>

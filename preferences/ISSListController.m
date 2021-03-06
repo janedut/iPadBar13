@@ -112,7 +112,7 @@ typedef enum {
 
 - (void)respring {
     UIAlertController *respring = [UIAlertController alertControllerWithTitle:@"iPadBar13"
-                                                                      message:@"Respring to apply? \n If you add cydiakk repo \n some functions will be disabled."
+                                                                      message:@"Respring to apply?"
                                                                preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
         [self realrespring];

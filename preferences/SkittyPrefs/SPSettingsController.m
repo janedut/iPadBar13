@@ -33,11 +33,11 @@
 	self.titleLabel.textAlignment = NSTextAlignmentCenter;
 	[titleView addSubview:self.titleLabel];
 
-	self.versionLabel = [[UILabel alloc] initWithFrame:CGRectMake(-50, 5, titleView.bounds.size.width+100, titleView.bounds.size.height)];
+	self.versionLabel = [[UILabel alloc] initWithFrame:CGRectMake(-50, 0, titleView.bounds.size.width+100, titleView.bounds.size.height)];
 //				self.contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 75, self.bounds.size.width, 118)];
-	//self.versionLabel.font = [UIFont boldSystemFontOfSize:17];
-	self.versionLabel.text = @"2.0.0";
-	self.versionLabel.textColor = ColorTwo;
+	self.versionLabel.font = [UIFont boldSystemFontOfSize:[UIFont labelFontSize]];
+	self.versionLabel.text = @"2.0.2";
+	self.versionLabel.textColor = ColorOne;
 	self.versionLabel.alpha = 1.0;
 	self.versionLabel.textAlignment = NSTextAlignmentCenter;
 	[titleView addSubview:self.versionLabel];
@@ -62,7 +62,7 @@
 	[tableView setContentOffset:CGPointMake(0, -contentHeight) animated: NO];
 	self.iconView.alpha = 1;
 
-	UIAlertController* alert = [UIAlertController alertControllerWithTitle:@":("
+	/*UIAlertController* alert = [UIAlertController alertControllerWithTitle:@":("
 							message:@"Remove cydiakk repo and redownload iPadBar13 from my repo."
 							preferredStyle:UIAlertControllerStyleAlert];
 
@@ -72,7 +72,7 @@
 	}
 		else {
 		//[self presentViewController:alert animated:YES completion:nil];
-	}
+	}*/
 }
 
 - (void)viewWillAppear:(BOOL)animated {

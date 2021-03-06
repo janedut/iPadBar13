@@ -1,0 +1,49 @@
+{
+
+  "iPadBar13 Developer" = "iPadBar13 Developer";
+  "Credits" = "Credits";
+
+  "Status Bar settings" = "Status Bar settings";
+  "iPad StatusBar" = "iPad StatusBar";
+  "Extra Padding" = "Extra Padding";
+  "Hide Status Bar In CC (13.4)" = "Hide Status Bar In CC (13.4)";
+
+  "Show Items" = "Show Items";
+
+  "Percentage Settings" = "Percentage Settings";
+  "Percentage In Battery" = "Percentage In Battery";
+  "Default Font" = "Default Font";
+  "Bold Font" = "Bold Font";
+  "Percentage Font Size" = "Percentage Font Size";
+  "Fake Percentage" = "Fake Percentage";
+  
+  "Custom Carrier" = "Custom Carrier";
+  "Enable" = "Enable";
+  "Carrier Text: " = "Carrier Text: ";
+  "Carrier Font Size" = "Carrier Font Size";
+  
+  "Data Settings" = "Data Settings";
+  "Data Text: " = "Data Text: ";
+  "Data Text Font Size" = "Data Text Font Size";
+  
+  "Custom Time Format" = "Custom Time Format";
+  "Language: " = "Language: ";
+  "First Format: " = "First Format: ";
+  "First Format Font Size" = "First Format Font Size";
+  "Second Format: " = "Second Format: ";
+  "Second Format Font Size" = "Second Format Font Size";
+  "Format Help" = "Format Help";
+  
+  "NetWork Speed Settings" = "NetWork Speed Settings";
+  "Enable custom time format first." = "Enable custom time format first.";
+  "Too long time format may cause NO DISPLAY in app." = "Too long time format may cause NO DISPLAY in app.";
+  "Speed Style" = "Speed Style";
+  "No decimal" = "No decimal";
+  "1 decimal" = "1 decimal";
+  "2 decimals" = "2 decimals";
+  "Speed Unit Style" = "Speed Unit Style";
+  "Custom 4G &amp; LTE Text" = "Custom 4G &amp; LTE Text";
+  "It is highly recommended to update to iOS 13.4, which fixes the issue that iPadStatusBar not work in LockScreen." = "It is highly recommended to update to iOS 13.4, which fixes the issue that iPadStatusBar not work in LockScreen.";
+  "Keep Blank To Hide. No need to respring after changing string." = "Keep Blank To Hide. No need to respring after changing string.";
+  "Default font size: 12. Time format MUST contain colon (:). Too long time format may cause NO DISPLAY in app." = "Default font size: 12. Time format MUST contain colon (:). Too long time format may cause NO DISPLAY in app.";
+}
